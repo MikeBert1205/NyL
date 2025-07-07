@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Listado de Hogares - NyL Bienes Raíces</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mobileMenu");
+      nav.classList.toggle("hidden");
+    }
+  </script>
+  <style>
+    nav.sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 240px;
+      background-color: #b91c1c; /* rojo Tailwind */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+      justify-content: space-between;
+    }
+
+    nav.sidebar ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav.sidebar ul li a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      display: block;
+    }
+
+    nav.sidebar ul li a:hover {
+      background-color: #991b1b;
+    }
+
+    nav.sidebar ul li a.active {
+      background-color: white;
+      color: #b91c1c;
+      font-weight: 700;
+    }
+
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .sidebar-header img {
+      height: 48px;
+      width: 48px;
+      border-radius: 9999px;
+      object-fit: contain;
+      background-color: white;
+    }
+
+    main.content {
+      margin-left: 240px;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body class="bg-white font-sans">
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <img src="NyL Logo.jpg" alt="Logo NyL" />
+      <h1 class="text-2xl font-bold">NyL Bienes Raíces</h1>
+    </div>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="listado.html" class="active">Propiedades</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <h2 class="text-3xl font-bold text-center text-red-700 mb-10">Listado de Propiedades Disponibles</h2>
+
+    <div class="space-y-8">
+      <div class="bg-white rounded shadow flex flex-col md:flex-row overflow-hidden">
+        <img src="Portal.png" alt="Casa 1" class="md:w-1/3 w-full object-cover">
+        <div class="p-6 md:w-2/3">
+          <h3 class="text-2xl font-semibold text-black">Portal de Cipres</h3>
+          <h3 class="text-2xl font-semibold text-black">Portal del Roble</h3>
+          <p class="text-gray-800">Casa de 3 recamaras, 2 baños y cochera techada.</p>
+          <p class="text-gray-800">A 1 min, de AV. Henequen y Santiago Troncoso</p>
+          <p class="text-black font-bold mt-2">$1,400,000 MXN</p>
+          <a href="detalle-casa1.html" class="text-red-700 hover:underline mt-2 inline-block">Ver más detalles</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="bg-white rounded shadow flex flex-col md:flex-row overflow-hidden">
+        <img src="https://via.placeholder.com/400x250" alt="Casa 2" class="md:w-1/3 w-full object-cover" />
+        <div class="p-6 md:w-2/3">
+          <h3 class="text-2xl font-semibold text-black">Departamento Céntrico Moderno</h3>
+          <p class="text-gray-800">2 recámaras, cocina integral, seguridad 24h.</p>
+          <p class="text-black font-bold mt-2">$950,000 MXN</p>
+          <a href="detalle-casa2.html" class="text-red-700 hover:underline mt-2 inline-block">Ver más detalles</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-red-700 text-white text-center py-4 mt-16 ml-[240px]">
+    <p>&copy; 2025 NyL Bienes Raíces. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
